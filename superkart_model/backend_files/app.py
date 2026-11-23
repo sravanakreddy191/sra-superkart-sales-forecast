@@ -1,7 +1,7 @@
 import joblib
 import pandas as pd
 from flask import Flask, request, jsonify
-
+saved_model_path = "superkart_model/backend_files/superkart_model.joblib"
 superkart_api = Flask("SuperKart Sales Predictor")
 model = joblib.load(saved_model_path)
 
