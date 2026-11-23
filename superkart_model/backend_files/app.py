@@ -1,9 +1,8 @@
 import joblib
 import pandas as pd
 from flask import Flask, request, jsonify
-saved_model_path = "superkart_model/backend_files/superkart_model.joblib"
 superkart_api = Flask("SuperKart Sales Predictor")
-model = joblib.load(saved_model_path)
+model = joblib.load("superkart_model.joblib")
 
 FEATURES = ["Product_Weight", "Product_Sugar_Content", "Product_Allocated_Area", "Product_MRP",
             "Store_Size", "Store_Location_City_Type", "Store_Type", "Product_Id_char",
